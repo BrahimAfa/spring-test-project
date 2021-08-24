@@ -890,14 +890,6 @@ class AttswExamApplicationTests {
 		Mockito.verify(studentRepository).findByIdAndStatus(student2.getId(),Status.ACTIVE.getStatusSeq());
 	}
 
-	@Test
-	public void applicationStarts() {
-		AttswExamApplication.main(new String[] {});
-        Optional<TemporalAccessor> now = dateAuditingProvider.getNow();
-        assertEquals(now,now);
-
-    }
-
     /*..///....student controller class*/
 
 
