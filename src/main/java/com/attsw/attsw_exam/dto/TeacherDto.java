@@ -5,7 +5,6 @@
 package com.attsw.attsw_exam.dto;
 
 import com.attsw.attsw_exam.model.Student;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
