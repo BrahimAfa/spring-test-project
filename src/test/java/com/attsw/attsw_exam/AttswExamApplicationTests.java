@@ -891,9 +891,10 @@ class AttswExamApplicationTests {
 	}
 	
 	@Test
-	void applicationStarts() {
+	public void applicationStarts() {
 		AttswExamApplication.main(new String[] {});
-		dateAuditingProvider.getNow();
+		Optional<TemporalAccessor> now = dateAuditingProvider.getNow();
+		assertNotNull(now);
 	}
 
     /*..///....student controller class*/
