@@ -4,7 +4,6 @@
  **/
 package com.attsw.attsw_exam.model;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
