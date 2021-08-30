@@ -889,6 +889,12 @@ class AttswExamApplicationTests {
 		Assertions.assertThat(actualResponseBody).isEqualToIgnoringWhitespace(objectMapper.writeValueAsString(student2));
 		Mockito.verify(studentRepository).findByIdAndStatus(student2.getId(),Status.ACTIVE.getStatusSeq());
 	}
+	
+	@Test
+	void applicationStarts() {
+		AttswExamApplication.main(new String[] {});
+		dateAuditingProvider.getNow();
+	}
 
     /*..///....student controller class*/
 
