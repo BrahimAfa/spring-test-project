@@ -73,7 +73,7 @@ class AttswExamApplicationTests {
     private DateAuditingProvider dateAuditingProvider;
 
 	@Test
-	public void testActiveTeachersList() {
+	void testActiveTeachersList() {
 
 
 
@@ -118,7 +118,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testDeactiveTeachers() {
+	void testDeactiveTeachers() {
 
 		List<Student> listODStudent2 = new ArrayList<>();
 		Student student2 = new Student();
@@ -145,7 +145,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testSaveTeacher() {
+	void testSaveTeacher() {
 
 		List<Student> listODStudent2 = new ArrayList<>();
 		Student student2 = new Student();
@@ -177,7 +177,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testUpdateTeacher() {
+	void testUpdateTeacher() {
 
 		List<Student> listODStudent2 = new ArrayList<>();
 		Student student2 = new Student();
@@ -201,7 +201,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testDeleteTeacher() {
+	void testDeleteTeacher() {
 
 		List<Student> listODStudent2 = new ArrayList<>();
 		Student student2 = new Student();
@@ -228,7 +228,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testDeleteTeacherWithoutStudent() {
+	void testDeleteTeacherWithoutStudent() {
 
 		Teacher teacher3 = new Teacher();
 		teacher3.setStatus(Status.ACTIVE.getStatusSeq());
@@ -244,7 +244,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testFindByIdTeacher() {
+	void testFindByIdTeacher() {
 
 		List<Student> listODStudent2 = new ArrayList<>();
 		Student student2 = new Student();
@@ -270,7 +270,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testActiveStudent() {
+	void testActiveStudent() {
 
 		Student student1 = new Student();
 		student1.setId(99);
@@ -286,7 +286,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testFindAllByCollleageName() {
+	void testFindAllByCollleageName() {
 
 		Student student2 = new Student();
 		student2.setContactNo("0783838883");
@@ -298,7 +298,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testDeactiveStudent() {
+	void testDeactiveStudent() {
 
 		Student student2 = new Student();
 		student2.setId(100);
@@ -322,7 +322,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testSystemActiveStudent() {
+	void testSystemActiveStudent() {
 
 		Student student2 = new Student();
 		student2.setId(100);
@@ -346,7 +346,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testFindByEmailTeacher() {
+	void testFindByEmailTeacher() {
 
 		TeacherDto teacher1Dto = new TeacherDto();
 		teacher1Dto.setStatus(Status.ACTIVE.getStatusSeq());
@@ -379,7 +379,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testSaveService() {
+	void testSaveService() {
 
 		Student student2 = new Student();
 		student2.setId(192);
@@ -395,7 +395,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testUpdateStudentService() {
+	void testUpdateStudentService() {
 
 		StudentDto student2Dto = new StudentDto();
 		student2Dto.setId(192);
@@ -424,7 +424,7 @@ class AttswExamApplicationTests {
 	}
 
     @Test
-    public void testDeleteStudentService() {
+    void testDeleteStudentService() {
 
         StudentDto student2Dto = new StudentDto();
 		student2Dto.setId(192);
@@ -446,7 +446,7 @@ class AttswExamApplicationTests {
     }
 
 	@Test
-	public void testFindStudentByAge() {
+	void testFindStudentByAge() {
 
 		StudentDto student2 = new StudentDto();
 		student2.setAge(44);
@@ -457,7 +457,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testFindStudentByCollageName() {
+	void testFindStudentByCollageName() {
 
 		StudentDto student2 = new StudentDto();
 		student2.setCollageName("Rahula");
@@ -468,7 +468,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testFindByIdAndStatus() {
+	void testFindByIdAndStatus() {
 
 		StudentDto student2 = new StudentDto();
 		student2.setId(123);
@@ -483,7 +483,7 @@ class AttswExamApplicationTests {
     /*student controller class*/
 
 	@Test
-	public void findAllTest() throws Exception {
+	void findAllTest() throws Exception {
 
 		Mockito.when(studentRepository.findAll()).thenReturn(
 				Collections.emptyList()
@@ -500,7 +500,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-    public void findAllTeachers() throws Exception {
+    void findAllTeachers() throws Exception {
 
         Mockito.when(teacherRepository.findAll()).thenReturn(
                 Collections.emptyList()
@@ -515,7 +515,7 @@ class AttswExamApplicationTests {
     }
 
 	@Test
-	public void findAllActiveTeachers() throws Exception {
+	void findAllActiveTeachers() throws Exception {
 
 		Mockito.when(teacherRepository.findAll()).thenReturn(
 				Collections.emptyList()
@@ -530,7 +530,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void findAllDeactiveTeachers() throws Exception {
+	void findAllDeactiveTeachers() throws Exception {
 
 		Mockito.when(teacherRepository.findAll()).thenReturn(
 				Collections.emptyList()
@@ -545,7 +545,7 @@ class AttswExamApplicationTests {
 	}
 
     @Test
-    public void saveTeachersControlerTest() throws Exception {
+    void saveTeachersControlerTest() throws Exception {
 
         List<Student> listODStudent2 = new ArrayList<>();
         Student student2 = new Student();
@@ -576,7 +576,7 @@ class AttswExamApplicationTests {
     }
 
 	@Test
-	public void updateTeachersControlerTestServerErrorResponse() throws Exception {
+	void updateTeachersControlerTestServerErrorResponse() throws Exception {
 
 		List<Student> listODStudent2 = new ArrayList<>();
 		Student student2 = new Student();
@@ -609,7 +609,7 @@ class AttswExamApplicationTests {
 	}
 
     @Test
-    public void updateTeachersControlerTestSuccessResponse() throws Exception {
+    void updateTeachersControlerTestSuccessResponse() throws Exception {
 
         Teacher teacher3 = new Teacher();
         teacher3.setId(99);
@@ -641,7 +641,7 @@ class AttswExamApplicationTests {
     }
 
 	@Test
-	public void deleteTeachersControlerTest() throws Exception {
+	void deleteTeachersControlerTest() throws Exception {
 
 		Teacher teacher3 = new Teacher();
 		teacher3.setId(99);
@@ -665,7 +665,7 @@ class AttswExamApplicationTests {
 	}
 
     @Test
-    public void deleteSuceessTeachersControlerTest() throws Exception {
+    void deleteSuceessTeachersControlerTest() throws Exception {
 
         Teacher teacher3 = new Teacher();
         teacher3.setId(99);
@@ -690,7 +690,7 @@ class AttswExamApplicationTests {
     }
 
 	@Test
-	public void findTeacherByIdControlerTest() throws Exception {
+	void findTeacherByIdControlerTest() throws Exception {
 
 		Teacher teacher3 = new Teacher();
 		teacher3.setId(99);
@@ -714,7 +714,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testFinalAllActiveDifControlerTest() throws Exception {
+	void testFinalAllActiveDifControlerTest() throws Exception {
 
 		Teacher teacher3 = new Teacher();
 		teacher3.setId(99);
@@ -753,7 +753,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void testFinalAllActiveReturnOkControlerTest() throws Exception {
+	void testFinalAllActiveReturnOkControlerTest() throws Exception {
 
 		Teacher teacher3 = new Teacher();
 		teacher3.setId(99);
@@ -792,7 +792,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void saveStudentControlerTest() throws Exception {
+	void saveStudentControlerTest() throws Exception {
 
 		Student student2 = new Student();
 		student2.setId(233);
@@ -819,7 +819,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void updateStudentControlerTest() throws Exception {
+	void updateStudentControlerTest() throws Exception {
 
 		Student student2 = new Student();
 		student2.setId(233);
@@ -842,7 +842,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void deleteStudentControlerTest() throws Exception {
+	void deleteStudentControlerTest() throws Exception {
 
 		Student student2 = new Student();
 		student2.setId(233);
@@ -866,7 +866,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void getStudentControlerTest() throws Exception {
+	void getStudentControlerTest() throws Exception {
 
 		Student student2 = new Student();
 		student2.setId(233);
