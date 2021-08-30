@@ -36,6 +36,7 @@ import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -889,7 +890,7 @@ class AttswExamApplicationTests {
 		Assertions.assertThat(actualResponseBody).isEqualToIgnoringWhitespace(objectMapper.writeValueAsString(student2));
 		Mockito.verify(studentRepository).findByIdAndStatus(student2.getId(),Status.ACTIVE.getStatusSeq());
 	}
-	
+
 	@Test
 	public void applicationStarts() {
 		AttswExamApplication.main(new String[] {});
