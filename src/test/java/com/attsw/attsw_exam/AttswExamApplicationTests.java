@@ -892,7 +892,7 @@ class AttswExamApplicationTests {
 	}
 
 	@Test
-	public void applicationStarts() {
+	void applicationStarts() {
 		AttswExamApplication.main(new String[] {});
 		Optional<TemporalAccessor> now = dateAuditingProvider.getNow();
 		assertNotNull(now);
