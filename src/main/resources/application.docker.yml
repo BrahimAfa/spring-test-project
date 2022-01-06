@@ -1,0 +1,11 @@
+server:
+  port: 8889
+
+spring:
+  jpa:
+    show-sql: false
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://${DB_HOST}:5432/attsw?currentSchema=attsw
+    username: postgress
+    password: postgress
