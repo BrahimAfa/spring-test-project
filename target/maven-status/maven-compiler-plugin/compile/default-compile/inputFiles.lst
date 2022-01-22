@@ -1,0 +1,17 @@
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/controller/TeacherController.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/controller/StudentController.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/AttswExamApplication.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/model/SharedModel.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/model/Student.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/dto/TeacherDto.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/serviceimpl/StudentServiceImpl.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/dto/StudentDto.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/repository/StudentRepository.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/enums/Status.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/utility/DateAuditingProvider.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/service/StudentService.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/dto/SharedModelDto.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/model/Teacher.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/service/TeacherService.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/serviceimpl/TeacherServiceImpl.java
+/home/brahim/Desktop/Dev/fiverr/javidmoazzan/qqqV2/qqq/src/main/java/com/attsw/attsw_exam/repository/TeacherRepository.java

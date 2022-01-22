@@ -37,6 +37,7 @@ import java.util.stream.Stream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -75,9 +76,6 @@ class AttswExamApplicationTests {
 
 	@Test
 	void testActiveTeachersList() {
-
-
-
 		List<Student> listODStudent = new ArrayList<>();
 		Student student1 = new Student();
 		student1.setId(99);
