@@ -4,6 +4,7 @@ pipeline {
 
         stage ("Initialize Environment") {
             steps {
+                pipelineDebug()
                 initializeBuild()
             }
         }
@@ -31,9 +32,11 @@ pipeline {
     }
 }
 
-def codeCheckout() {
+def pipelineDebug() {
     sh "pwd"
     sh "ls"
+    sh 'echo "$USER"'
+
 }
 def buildApplication() {
     try {
