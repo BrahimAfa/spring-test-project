@@ -19,7 +19,6 @@ def codeCheckout() {
     sh "pwd"
     sh "ls"
 }
-
 def build() {
     try {
         withMaven(maven: 'Maven') {
