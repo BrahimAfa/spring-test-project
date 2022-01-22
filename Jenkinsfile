@@ -9,7 +9,7 @@ pipeline {
         }
         stage ("Build Application") {
             steps {
-                build()
+                buildApplication()
             }
 
         }
@@ -25,7 +25,7 @@ def codeCheckout() {
     sh "pwd"
     sh "ls"
 }
-def build() {
+def buildApplication() {
     try {
         withMaven(maven: 'Maven') {
             sh 'mvn clean install'
