@@ -1,16 +1,18 @@
 FROM openjdk:8 as build
 
+RUN apt-get update && apt-get install -y software-properties-common maven
+
 WORKDIR /app
 
 COPY pom.xml .
 
-RUN mvn dependency:go-offline -
+RUN mvn dependency:go-offline -B
 
 COPY src src
 
 COPY src/main/resources/application.docker.yml src/main/resources/application.yml
 
-RUN  mvn -DskipTests package
+RUN mvn package -DskipTests
 
 FROM openjdk:8 as release
 
