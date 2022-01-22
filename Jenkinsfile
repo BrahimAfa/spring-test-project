@@ -40,7 +40,7 @@ def buildApplication() {
         sh 'mvn clean install'
     }
     catch (err) {
-        echo "buildApplication failed"
+        echo "Build Application Failed"
         throw err
     }
 
@@ -51,7 +51,7 @@ def runSonarScan() {
         sh "mvn clean verify sonar:sonar -Dsonar.projectKey=ds-ensa-test -Dsonar.host.url=http://46.101.76.79:9000 -Dsonar.login=760330b521b7dec8932f5925af9012b7c85c6990"
     }
     catch (err) {
-        echo "runSonarScan failed"
+        echo "Run Sonar Scan Failed"
         throw err
     }
 

@@ -6,7 +6,7 @@ spring:
     show-sql: true
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/attsw?currentSchema=attsw
+    url: jdbc:postgresql://localhost:5433/attsw?currentSchema=attsw
     username: postgress
     password: postgress
   hibernate:
