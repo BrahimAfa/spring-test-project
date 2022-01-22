@@ -3,8 +3,11 @@ pipeline {
         label 'linux'
     }
     stages {
+
         stage ("Code Checkout") {
-            echo "hello"
+            steps {
+                echo "hello"
+            }
         }
         // stage ("Build Application") {
         //     build()
