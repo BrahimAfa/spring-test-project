@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.attsw.attsw_exam.AttswExamApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.522 s - in com.attsw.attsw_exam.AttswExamApplicationTests
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.599 s - in com.attsw.attsw_exam.AttswExamApplicationTests

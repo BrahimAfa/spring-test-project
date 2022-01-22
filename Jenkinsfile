@@ -1,7 +1,6 @@
 def codeCheckout() {
-    cleanWs()
-    checkout scm
-    success("Workspace clean and code checkout.")
+    sh "pwd"
+    sh "ls"
 }
 
 def build() {
@@ -17,13 +16,11 @@ def build() {
 }
 
 def runSonarScan() {
-    withSonarQubeEnv(credentialsId: 'Sonarqube') {
         withMaven(maven: 'Maven') {
             sh"""
-            mvn sonar:sonar -Dsonar.projectKey=adexam -Dsonar.organization=javid141moazan -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=07ba28e79449a72466fbb76370d4d178c7f90363
+            mvn clean verify sonar:sonar -Dsonar.projectKey=ds-ensa-test -Dsonar.host.url=http://46.101.76.79:9000 -Dsonar.login=760330b521b7dec8932f5925af9012b7c85c6990
             """
         }
-    }
 }
 
 def errorMsg(String text) {
@@ -36,18 +33,17 @@ def success(String text) {
     echo "\u001B[1m\033[32m${text}\u001B[m"
 }
 
-node('master') {
-    timeout (time: 1, unit: 'HOURS') {
-        ansiColor('xterm') {
-            stage ("Code Checkout") {
-                codeCheckout()
-            }
-            stage ("Build Application") {
-                build()
-            }
-            stage ("Generate Sonar Report") {
-                runSonarScan()
-            }
+pipeline {
+    agent { label 'dev' }
+    stages {
+        stage ("Code Checkout") {
+            codeCheckout()
+        }
+        stage ("Build Application") {
+            build()
+        }
+        stage ("Generate Sonar Report") {
+            runSonarScan()
         }
     }
 }
